@@ -1,0 +1,28 @@
+<body class="lift:content_id=page">
+	<div id="page" class="lift:surround?with=admin;at=content">
+		<title data-lift="head">Home Page</title>
+		<div>
+			<a href="/admin/addCountry">Добавить страну</a>
+		</div>
+		<div style="display: inline-block; width: 200px; vertical-align: top;">
+			<h4>Страны:</h4>
+			<ul>
+				<li data-lift="admin.country.AdminCountry.countries"><a foo:href="" foo:class=""><foo:name></foo:name></a></li>
+			</ul>
+		</div>
+		<div style="display: inline-block; width: 400px; vertical-align: top;">
+			<div data-lift="admin.country.AdminCountry.isCountryFound">
+				<div data-lift="admin.country.AdminCountry.updateForm?form=post">
+					<table>
+						<tr>
+							<td>Название страны</td>
+							<td><foo:country-name></foo:country-name></td>
+						</tr>
+					</table>
+					<input class="button" type="submit" value="Обновить" />
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+

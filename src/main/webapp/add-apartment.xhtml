@@ -1,0 +1,129 @@
+<body class="lift:content_id=body">
+	<div id="body" data-lift="surround?with=default;at=content">
+		<title data-lift="head"></title>
+		<meta name="keywords" content="" data-lift="head" />
+		<meta name="description" content="" data-lift="head" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" data-lift="head" />
+
+		<script src="/js/vendor/jquery.ui.widget.js" data-lift="head"></script>
+		<script src="/js/jquery.iframe-transport.js" data-lift="head"></script>
+		<script src="/js/jquery.fileupload.js" data-lift="head"></script>
+		<script src="/js/add-apartment.js" data-lift="head"></script>
+
+		<table class="lift:AddApartmentForm.render" cellpadding="0" style="width: 100%; border-spacing: 0;">
+			<tr>
+				<td class="c-left">
+					<h1 style="color: #bbbbbb; padding: 10px 0 15px 10px;">Размещение объявления</h1>
+					<form class="lift:form.ajax">
+						<div class="lift:AddApartmentForm.addForm add-apartment-form">
+							<table width="100%" cellpadding="0" class="add-apartment-table">
+								<tr>
+									<td colspan="2"><h4>Основная информация</h4></td>
+								</tr>
+								<tr>
+									<td style="width: 150px;">Рубрика:</td>
+									<td><span id="topic"></span><a href="/add" class="change-rub">Сменить рубрику</a></td>
+								</tr>
+								<tr>
+									<td>Тип объявления:</td>
+									<td><span id="ad-type"></span></td>
+								</tr>
+								<tr>
+									<td>Регион:</td>
+									<td><select id="province-list" name="province-list">
+									</select></td>
+								</tr>
+								<tr id="city-list-wrapper">
+								</tr>
+								<tr id="district-list-wrapper">
+							</table>
+
+							<table id="add-ap-descr-info" width="100%" cellpadding="0" class="add-apartment-table" style="display: none;">
+								<tr>
+									<td><span style="display: block; width: 150px;">Улица:</span></td>
+									<td><input id="street-input" name="street-input" /></td>
+								</tr>
+								<tr>
+									<td>Заголовок:</td>
+									<td><input name="title-input" id="title-input" /></td>
+								</tr>
+								<tr>
+									<td>Комнат:</td>
+									<td><select id="bedroom-num-select" name="bedroom-num-select">
+									</select></td>
+								</tr>
+								<tr>
+									<td>Стоимость(гр/мес):</td>
+									<td><input id="price-input" name="price-input" value="1" /></td>
+								</tr>
+								<tr>
+									<td>Текст объявления:</td>
+									<td><textarea id="description-input" name="description-input">123</textarea></td>
+								</tr>
+								<tr>
+									<td colspan="2"><h4>Дополнительная информация</h4></td>
+								</tr>
+								<tr>
+									<td colspan="2"><table width="100%" cellpadding="0" style="border-spacing: 0;">
+											<tr>
+												<td><input type="checkbox" id="furn-cb" name="furn-cb" value="" /><label for="furn-cb">С
+														мебелью</label></td>
+												<td><input type="checkbox" id="cab-tv-cb" name="cab-tv-cb" value="" /><label for="cab-tv-cb">Кабельное
+														телевидение</label></td>
+												<td><input type="checkbox" id="internet-cb" name="internet-cb" value="" /><label for="internet-cb">Интернет</label></td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" id="air-condit-cb" name="air-condit-cb" value="" /><label
+													for="air-condit-cb">Кондиционер</label></td>
+												<td><input type="checkbox" id="laundry-fac-cb" name="laundry-fac-cb" value="" /><label
+													for="laundry-fac-cb">Стиральная машинка</label></td>
+												<td><input type="checkbox" id="boiler-cb" name="boiler-cb" value="" /><label for="boiler-cb">Бойлер</label></td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" id="fridge-cb" name="fridge-cb" value="" /><label for="fridge-cb">Холодильник</label></td>
+												<td><input type="checkbox" id="fireplace-cb" name="fireplace-cb" value="" /><label for="fireplace-cb">Камин</label></td>
+												<td><input type="checkbox" id="parking-cb" name="parking-cb" value="" /><label for="parking-cb">Рядом
+														парковка</label></td>
+											</tr>
+										</table></td>
+								</tr>
+								<tr>
+									<td colspan="2"><h4>Фотографии</h4>
+										<div>
+											<button id="add-photo-button">Добавить фото</button>
+											<div id="progress" style="width: 20em; border: 1pt solid silver; display: none">
+												<div id="progress-bar" style="background: green; height: 1em; width: 0%"></div>
+											</div>
+										</div>
+
+										<ul id="images-list"></ul></td>
+								</tr>
+								<tr>
+									<td colspan="2"><h4>Контактные данные</h4></td>
+								</tr>
+								<tr>
+									<td>Телефон:</td>
+									<td><input type="text" id="mobile-input" name="mobile-input" value=""
+										placeholder="Пример: +38 (xxx) xxx-xx-xx" /></td>
+								</tr>
+								<tr>
+									<td colspan="2"></td>
+								</tr>
+								<tr>
+									<td colspan="2"><input class="button" type="submit" value="Опубликовать" /></td>
+								</tr>
+							</table>
+						</div>
+					</form>
+					<div>
+						<form class="lift:form.ajax">
+							<input id="file-uploader" type="file" name="files[]" data-url="/upload" multiple style="display: none;" />
+						</form>
+					</div>
+				</td>
+				<td class="c-right"></td>
+			</tr>
+		</table>
+	</div>
+</body>
+

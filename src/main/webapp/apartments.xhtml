@@ -1,0 +1,139 @@
+<div data-lift="surround?with=main">
+	<div data-lift="ApartmentsSnippet">
+
+		<lift:bind-at id="page-title" name="page-title"></lift:bind-at>
+		<lift:bind-at id="page-desc" name="page-desc"></lift:bind-at>
+
+		<lift:bind-at name="content">
+			<title data-lift="head"></title>
+			<meta name="keywords" content="" data-lift="head" />
+			<meta name="description" content="" data-lift="head" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" data-lift="head" />
+
+			<table width="100%" cellpadding="0" style="border-spacing: 0;">
+				<tr>
+					<td class="c-left">
+						<div class="lift:ApartmentsSnippet.showApartmentCounts table-rows-count-info">
+							Показано
+							<foo:onpage></foo:onpage>
+							из
+							<foo:total></foo:total>
+						</div>
+						<table id="result-table" class="res-table display" width="100%" cellpadding="0">
+							<thead>
+								<tr role="row">
+									<th></th>
+									<th></th>
+								</tr>
+							</thead>
+							<tr data-lift="ApartmentsSnippet.showApartments" class="apartments-list">
+								<td style="display: none;"><foo:id></foo:id></td>
+								<td><div class="post-meta">
+										<div>
+											<ul class="clearfix">
+												<li class="post-title"><a foo:attr-href="" foo:attr-title="" class='title-link'><foo:title></foo:title></a></li>
+												<li class="ad-type"><foo:ad-type></foo:ad-type></li>
+												<li class="post-posted"><foo:posted></foo:posted></li>
+											</ul>
+										</div>
+									</div>
+									<table class="ap-info">
+										<tr>
+											<td class="left">
+												<div class="img-wrap">
+													<a foo:attr-href="" foo:attr-title=""><img foo:main-image-src="" foo:attr-alt="" style="width: 200px;" /></a>
+												</div>
+											</td>
+											<td class="right">
+												<div class="price">
+													$
+													<foo:price></foo:price>
+												</div>
+												<h5 class="street">
+													<foo:district></foo:district>
+													<foo:street></foo:street>
+												</h5>
+												<div class="rooms">
+													Комнат:
+													<foo:rooms></foo:rooms>
+												</div>
+												<div class="widget amenities">
+													<ul class="first">
+														<foo:additions></foo:additions>
+													</ul>
+													<ul>
+														<foo:additions2></foo:additions2>
+													</ul>
+													<div class="clear"></div>
+												</div>
+											</td>
+										</tr>
+									</table></td>
+							</tr>
+						</table>
+
+						<ul class="pagination">
+							<li data-lift="ApartmentsSnippet.showPagination"></li>
+						</ul>
+					</td>
+					<td class="c-right">
+						<h3>Подбор по параметрам</h3>
+						<div class="lift:ApartmentFiltersForm.addForm search-block">
+
+							<fieldset id="ad-type-filter-fs">
+								<h4 class="side-title">Ваиант:</h4>
+								<ul>
+									<li data-lift="ApartmentFiltersForm.FilterAdTypes"><a foo:href="" foo:class=""><foo:type></foo:type></a></li>
+								</ul>
+							</fieldset>
+
+							<fieldset id="period-filter-fs" class="lift:ApartmentFiltersForm.hasPeriod">
+								<h4 class="side-title">Вид аренды:</h4>
+								<ul>
+									<li data-lift="ApartmentFiltersForm.FilterPeriods"><a foo:href="" foo:class=""><foo:period></foo:period></a>
+									</li>
+								</ul>
+							</fieldset>
+
+							<fieldset id="price-filter-fs">
+								<h4 class="side-title">Цена:</h4>
+								<form class="lift:form.ajax">
+									<div class="lift:ApartmentFiltersForm.FilterPrice">
+										<input type="text" id="price-amount" disabled="disabled" />
+										<div id="price-slider" style="padding-left: 10px;"></div>
+										<input type="hidden" id="price-from" /><input type="hidden" id="price-to" />
+										<button>OK</button>
+									</div>
+								</form>
+							</fieldset>
+
+							<fieldset id="rooms-filter-fs">
+								<h4 class="side-title">Количество комнат</h4>
+								<ul class="lift:ApartmentFiltersForm.FilterRooms">
+									<li><input type="checkbox" /><label class="lb"><span></span></label></li>
+								</ul>
+							</fieldset>
+
+							<button id="addition-filter-fs-bt" style="width: 98%;">Удобства</button>
+							<div id="addition-filter-fs">
+								<ul data-lift="ApartmentFiltersForm.FilterAdditions">
+									<li><input type="checkbox" id="furn-cb" /><label for="furn-cb">С мебелью</label></li>
+									<li><input type="checkbox" id="cab-tv-cb" /><label for="cab-tv-cb">Кабельное телевидение</label></li>
+									<li><input type="checkbox" id="internet-cb" /><label for="internet-cb">Интернет</label></li>
+									<li><input type="checkbox" id="air-condit-cb" /><label for="air-condit-cb">Кондиционер</label></li>
+									<li><input type="checkbox" id="laundry-fac-cb" /><label for="laundry-fac-cb">Стиральная машинка</label></li>
+									<li><input type="checkbox" id="boiler-cb" /><label for="boiler-cb">Бойлер</label></li>
+									<li><input type="checkbox" id="fridge-cb" /><label for="fridge-cb">Холодильник</label></li>
+									<li><input type="checkbox" id="fireplace-cb" /><label for="fireplace-cb">Камин</label></li>
+									<li><input type="checkbox" id="parking-cb" /><label for="parking-cb">Рядом парковка</label></li>
+								</ul>
+							</div>
+
+							<div class="lift:ApartmentFiltersForm.FilterLocation"></div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</lift:bind-at>
+	</div>
+</div>

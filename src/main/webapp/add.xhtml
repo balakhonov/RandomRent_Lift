@@ -1,0 +1,102 @@
+<body class="lift:content_id=body">
+	<div id="body" data-lift="surround?with=main;at=content">
+		<title data-lift="head"></title>
+		<meta name="keywords" content="" data-lift="head" />
+		<meta name="description" content="" data-lift="head" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" data-lift="head" />
+
+		<table width="100%" cellpadding="0" style="border-spacing: 0;">
+			<tr>
+				<td class="c-left" style="padding-bottom: 30px;">
+					<h1 style="color: #bbbbbb; padding: 10px 0 15px 10px;">Выбирете рубрику для подачи объявления в Севастополе:</h1>
+					<ul class="rent-filter">
+<!-- 						<li class=""><a href="#" class="button flt rent-want arr">Сниму</a></li> -->
+						<li class=""><a href="#" class="button flt rent-offer arr">Сдам</a></li>
+						<!-- <li class=""><a href="#" class="button flt rent-buy arr">Куплю</a></li> -->
+						<!-- <li class=""><a href="#" class="button flt rent-sell arr">Продам</a></li> -->
+					</ul>
+					<ul class="rent-filter2">
+						<li class=""><a href="#" class="button flt lt arr">Длительно</a></li>
+						<li class=""><a href="#" class="button flt st arr">Посуточно</a></li>
+					</ul>
+					<ul class="rent-filter3">
+						<li class=""><a id="ro-1" href="#" class="button flt">Кваритру</a></li>
+						<li class=""><a id="ro-2" href="#" class="button flt">Комнату</a></li>
+						<!-- <li class=""><a id="ro-3" href="#" class="button flt">Коттедж, дом</a></li> -->
+						<!-- <li class=""><a id="ro-4" href="#" class="button flt">Гараж</a></li> -->
+						<!-- <li class=""><a id="ro-5" href="#" class="button flt">Коммерческое помещение</a></li> -->
+						<!-- <li class=""><a id="ro-6" href="#" class="button flt">Земельный участок</a></li> -->
+					</ul>
+				</td>
+				<td class="c-right"></td>
+			</tr>
+		</table>
+		<script>
+			var type = 0;
+			var period = 0;
+
+			$(".rent-filter a").click(function() {
+				$(".rent-filter a").removeClass("selected");
+				$(".rent-filter2 a").removeClass("selected");
+				$(this).addClass("selected");
+
+				$(".rent-filter2").hide();
+				$(".rent-filter3").hide();
+			});
+			$(".rent-filter .rent-want").click(function() {
+				type = 1;
+				$(".rent-filter2").show();
+			});
+			$(".rent-filter .rent-offer").click(function() {
+				type = 2;
+				$(".rent-filter2").show();
+			});
+			$(".rent-filter .rent-buy").click(function() {
+				type = 3;
+				showResult(type);
+			});
+			$(".rent-filter .rent-sell").click(function() {
+				type = 4;
+				showResult(type);
+			});
+
+			$(".rent-filter2 a").click(function() {
+				$(".rent-filter2 a").removeClass("selected");
+				$(this).addClass("selected");
+			});
+			$(".rent-filter2 .lt").click(function() {
+				period = 1;
+				showResult(type, period);
+			});
+			$(".rent-filter2 .st").click(function() {
+				period = 2;
+				showResult(type, period);
+			});
+
+			function showResult(type, period) {
+				$(".rent-filter3").show();
+
+				if (type == 1 || type == 2) {
+					var param = "?type=" + type + "&period=" + period
+							+ "&cid=1";
+
+					$("#ro-1").attr("href", "/add-apartment" + param);
+					$("#ro-2").attr("href", "/add-room" + param);
+					$("#ro-3").attr("href", "/add-house" + param);
+					$("#ro-4").attr("href", "/add-garage" + param);
+					$("#ro-5").attr("href", "/add-com-place" + param);
+					$("#ro-6").attr("href", "/add-stead" + param);
+					$("#ro-6").hide();
+				} else {
+					$("#ro-1").attr("href", "/add-apartment?type=" + type);
+					$("#ro-2").attr("href", "/add-room?type=" + type);
+					$("#ro-3").attr("href", "/add-house?type=" + type);
+					$("#ro-4").attr("href", "/add-garage?type=" + type);
+					$("#ro-5").attr("href", "/add-com-place?type=" + type);
+					$("#ro-6").attr("href", "/add-stead?type=" + type);
+				}
+			}
+		</script>
+	</div>
+</body>
+

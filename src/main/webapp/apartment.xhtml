@@ -1,0 +1,88 @@
+<body class="lift:content_id=body">
+	<div id="body" data-lift="surround?with=default;at=content">
+		<title data-lift="head"></title>
+		<meta name="keywords" content="" data-lift="head" />
+		<meta name="description" content="" data-lift="head" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" data-lift="head" />
+
+		<script src="/js//mbGallery.js" data-lift="head"></script>
+
+		<div class="ap-info-contant" data-lift="ApartmentSnippet.render">
+			<table>
+				<tr>
+					<td style="vertical-align: top;">
+						<div class="img-wrap">
+							<a id="main-image" foo:href="#" title=""> <img title="" alt="" foo:main-image-src="" style="cursor: pointer;" /></a>
+						</div>
+						<ul id="images-list" class="galleryCont" style="display: none;">
+							<foo:images></foo:images>
+						</ul>
+					</td>
+
+					<td style="vertical-align: top; padding: 5px 10px;">
+						<table width="100%" cellspacing="0" cellpadding="0" border="0">
+							<tbody>
+								<tr>
+									<td valign="top" style="width: 100px;">Дата публикации:</td>
+									<td><foo:posted></foo:posted></td>
+								</tr>
+								<tr>
+									<td valign="top">Аренда:</td>
+									<td><foo:period></foo:period></td>
+								</tr>
+								<tr>
+									<td valign="top">Район:</td>
+									<td><foo:district></foo:district></td>
+								</tr>
+								<tr>
+									<td class="" valign="top">Улица:</td>
+									<td><foo:street></foo:street><br /> <a href="#" class="">Смотреть на карте</a></td>
+								</tr>
+								<tr>
+									<td valign="top">Цена:</td>
+									<td style="font-weight: bold">$<foo:price></foo:price></td>
+								</tr>
+								<tr>
+									<td valign="top">Комнат:</td>
+									<td><foo:rooms></foo:rooms></td>
+								</tr>
+							</tbody>
+						</table>
+						<div>
+							<h2>Описание:</h2>
+							<p class="descr">
+								<foo:description></foo:description>
+							</p>
+						</div>
+						<div class="widget amenities">
+							<h2>Дополнительная информация:</h2>
+							<ul class="first">
+								<foo:additions></foo:additions>
+							</ul>
+							<ul>
+								<foo:additions2></foo:additions2>
+							</ul>
+							<div class="clear"></div>
+						</div>
+						<div>
+							<h2>Контактные данные:</h2>
+							<table width="300" cellspacing="0" cellpadding="0" border="0">
+								<tbody>
+									<tr>
+										<td valign="top" style="width: 100px;">Телефон:</td>
+										<td><foo:mobile></foo:mobile></td>
+									</tr>
+									<tr>
+										<td valign="top">E-mail:</td>
+										<td><foo:email></foo:email></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+

@@ -1,0 +1,44 @@
+<body class="lift:content_id=page">
+	<div id="page" class="lift:surround?with=admin;at=content">
+		<title data-lift="head">Home Page</title>
+		<div style="vertical-align: top;">
+			<div data-lift="admin.city.SnippetCities.countries">
+				Страны:<select id="country-list">
+				</select> <br /> <br />
+			</div>
+
+			<div data-lift="admin.city.SnippetCities.isCountryFound">
+				<div data-lift="admin.city.SnippetCities.provinces">
+					Провинции:<select id="province-list">
+					</select> <br /> <br />
+				</div>
+
+				<div data-lift="admin.city.SnippetCities.isProvinceFound">
+					<div data-lift="admin.city.SnippetCities.addCityButton">
+						<a foo:href="">Добавить Город</a><br /> <br />
+					</div>
+
+					<div style="display: inline-block; width: 250px; vertical-align: top;">
+						<h4>Города:</h4>
+						<ul>
+							<li data-lift="admin.city.SnippetCities.cities"><a foo:href="" foo:class=""><foo:name></foo:name></a></li>
+						</ul>
+					</div>
+					<div style="display: inline-block; width: 400px; vertical-align: top;">
+						<div data-lift="admin.city.SnippetCities.isCityFound">
+							<div data-lift="admin.city.SnippetCities.updateForm?form=post">
+								<table>
+									<tr>
+										<td>Название города</td>
+										<td><input name="city-name" type="text" value="" /></td>
+									</tr>
+								</table>
+								<input class="button" type="submit" value="Обновить" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</body>
+

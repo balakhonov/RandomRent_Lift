@@ -1,0 +1,125 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:lift="http://liftweb.net/">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet" type="text/css" href="/css/jquery-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/css/main.css" />
+
+<script id="jquery" src="/classpath/jquery.js" type="text/javascript"></script>
+<script data-lift="with-resource-id" id="json" src="/classpath/json.js" type="text/javascript"></script>
+<script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/js/purl.js"></script>
+<script type="text/javascript" src="/js/my.js"></script>
+</head>
+<body>
+	<div id="header-wrapper">
+		<div id="header">
+			<div class="header-menu-wrapper">
+				<div id="pngfix-right"></div>
+				<ul class="menu">
+					<li class="page_item"><a href="/" title="Недвижимость">Главная</a></li>
+					<!-- 					<li class="rent"><a href="/apartments" title="Недвижимость">Недвижимость</a> -->
+					<!-- 						<div class="rent"> -->
+					<!-- 							<ul> -->
+					<!-- 								<li><a href="#">Квартиры</a></li> -->
+					<!-- 								<li><a href="#">Комнаты</a></li> -->
+					<!-- 							</ul> -->
+					<!-- 							<ul> -->
+					<!-- 								<li><a href="#">Дома</a></li> -->
+					<!-- 								<li><a href="#">Помещения</a></li> -->
+					<!-- 							</ul> -->
+					<!-- 							<ul> -->
+					<!-- 								<li><a href="#">Гаражи</a></li> -->
+					<!-- 								<li><a href="#">Участки</a></li> -->
+					<!-- 							</ul> -->
+					<!-- 						</div></li> -->
+					<li class="page_item"><a href="/add" title="Подать объявление">Подать объявление</a></li>
+					<li class="page_item"><a href="#" title="Связаться с нами">Связаться с нами</a></li>
+					<li class="page_item reg-b"><a id="sign-up-button" title="Регистрация" href="#">Регистрация</a></li>
+					<li data-lift="LogInForm.loggedOut" class="page_item reg-b"><a id="sign-in-button" title="Войти" href="#">Войти</a></li>
+					<li data-lift="LogInForm.loggedIn" class="page_item reg-b"><a id="account-button" title="Кабинет" href="#">Кабинет</a></li>
+					<li data-lift="LogInForm.loggedIn" class="page_item reg-b"><a class="lift:LogInForm.logOut"
+						id="sign-out-button" title="Выйти" href="#">Выйти</a></li>
+				</ul>
+				<div id="pngfix-left"></div>
+			</div>
+		</div>
+	</div>
+
+	<div id="content-wrapper">
+		<div id="content-header">
+			<div id="logo">
+				<a href="/apartments">Аренда квартир в Севастополе</a>
+				<h1>Посуточная и длительная аренда квартир в Севастополе.</h1>
+			</div>
+<!-- 			<div class="add-advert"> -->
+<!-- 				<a href="/add" title="Бесплатно разместить Ваше объявление ">Подать объявление</a> -->
+<!-- 			</div> -->
+		</div>
+		<div id="content">The main content will get bound here</div>
+		<div id="footer"></div>
+	</div>
+
+	<img alt="" id="ajax-loader" style="display: none; margin-bottom: 0px; margin-left: 5px" src="/images/ajax-loader.gif" />
+
+
+	<div id="sign-in-dialog" title="Вход в личный кабинет" style="display: none;" data-lift="LogInForm.loggedOut">
+		<div class="sign-in-form">
+			<form class="lift:form.ajax">
+				<div class="lift:LogInForm.logIn?form=post">
+					<table>
+						<tr>
+							<td>E-mail:</td>
+							<td><input name="sign-in-mail-input" type="text" /></td>
+						</tr>
+						<tr>
+							<td colspan="2"><span class="lift:Msg?id=sign-in-mail-err;errorClass=error"></span></td>
+						</tr>
+						<tr>
+							<td>Пароль:</td>
+							<td><input name="sign-in-pass-input" type="password" /></td>
+						</tr>
+						<tr>
+							<td colspan="2"><span class="lift:Msg?id=sign-in-pass-err;errorClass=error"></span></td>
+						</tr>
+					</table>
+					<input class="button" type="submit" value="Войти" />
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div id="sign-up-dialog" title="Регистрация в системе" style="display: none;">
+		<div class="sign-up-form">
+			<form class="lift:form.ajax">
+				<div class="lift:RegistrationForm.regForm?form=post">
+					<table>
+						<tr>
+							<td>E-mail:</td>
+							<td><input name="sign-up-mail-input" type="text" value="" /></td>
+						</tr>
+						<tr>
+							<td colspan="2"><span class="lift:Msg?id=sign-up-mail-err;errorClass=error"></span></td>
+						</tr>
+						<tr>
+							<td>Пароль:</td>
+							<td><input name="sign-up-pass-input" type="password" value="" /></td>
+						</tr>
+						<tr>
+							<td colspan="2"><span class="lift:Msg?id=sign-up-pass-err;errorClass=error"></span></td>
+						</tr>
+						<tr>
+							<td>Еще раз:</td>
+							<td><input name="sign-up-re-pass-input" type="password" value="" /></td>
+						</tr>
+						<tr>
+							<td colspan="2"><span class="lift:Msg?id=sign-up-repass-err;errorClass=error"></span></td>
+						</tr>
+					</table>
+					<input class="button" type="submit" value="Регистрация" />
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

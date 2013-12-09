@@ -1,0 +1,50 @@
+<body class="lift:content_id=page">
+	<div id="page" class="lift:surround?with=admin;at=content">
+		<title data-lift="head">Home Page</title>
+		<div style="vertical-align: top;">
+
+			<table>
+				<tr data-lift="admin.district.PageDistrict.countries">
+					<td>Страны:</td>
+					<td><select id="country-list"></select></td>
+				</tr>
+				<tr data-lift="admin.district.PageDistrict.isCountryFound">
+					<td>Провинции:</td>
+					<td data-lift="admin.district.PageDistrict.provinces"><select id="province-list"></select></td>
+				</tr>
+				<tr data-lift="admin.district.PageDistrict.isProvinceFound">
+					<td>Город:</td>
+					<td data-lift="admin.district.PageDistrict.cities"><select id="city-list"></select></td>
+				</tr>
+			</table>
+
+			<div class="separator"></div>
+
+			<div data-lift="admin.district.PageDistrict.isCityFound">
+				<div data-lift="admin.district.PageDistrict.addDistrictButton">
+					<a class="button" foo:href="">Добавить Район</a><br /> <br />
+				</div>
+
+				<div style="display: inline-block; width: 250px; vertical-align: top;">
+					<h4>Районы:</h4>
+					<ul>
+						<li data-lift="admin.district.PageDistrict.districts"><a foo:href="" foo:class=""><foo:name></foo:name></a></li>
+					</ul>
+				</div>
+				<div style="display: inline-block; width: 400px; vertical-align: top;">
+					<div data-lift="admin.district.PageDistrict.isDistrictFound">
+						<div data-lift="admin.district.PageDistrict.updateForm?form=post">
+							<table>
+								<tr>
+									<td>Название района</td>
+									<td><input name="district-name" type="text" value="" /></td>
+								</tr>
+							</table>
+							<input class="button" type="submit" value="Обновить" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</body>
+

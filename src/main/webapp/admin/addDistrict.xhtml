@@ -1,0 +1,31 @@
+<body class="lift:content_id=page">
+	<div id="page" class="lift:surround?with=admin;at=content">
+		<title data-lift="head">Home Page</title>
+		<div data-lift="admin.district.PageDistrict.isCityFound">
+			<form class="lift:form.ajax">
+				<div class="lift:admin.district.PageDistrict.addForm?form=post">
+					<table>
+						<tr>
+							<td>Страна:</td>
+							<td><span id="country-name"></span></td>
+						</tr>
+						<tr>
+							<td>Регион:</td>
+							<td><span id="province-name"></span></td>
+						</tr>
+						<tr>
+							<td>Город:</td>
+							<td><span id="city-name"></span></td>
+						</tr>
+						<tr>
+							<td>Район:</td>
+							<td><input name="district-name" type="text" value="" /></td>
+						</tr>
+					</table>
+					<input class="button" type="submit" value="Добавить" />
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+

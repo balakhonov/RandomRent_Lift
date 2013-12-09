@@ -1,0 +1,105 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:lift="http://liftweb.net/">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+<title>Home</title>
+</head>
+<body class="lift:content_id=main">
+	<div id="main" class="lift:surround?with=default;at=content">
+		<head>
+<link data-lift="head" rel="stylesheet" href="red-titles.css"
+	type="text/css" />
+<!-- Set the title of the page -->
+<title>Home Page</title>
+		</head>
+
+		<h2>Welcome to your project!</h2>
+
+		<p>
+			Welcome to your Lift app at <span id="time">Time goes here</span> <br />
+
+			<br /> The time was set in
+			<code>code.controller.RootController</code>
+		</p>
+
+		<hr />
+
+		<p>An example of Lift's MVCHelper routing via URL Path:
+		<div>
+			<form action="/show_int"
+				onsubmit="window.location = this.action+'/'+encodeURIComponent(this['int'].value); return false">
+				Enter an Integer value: <input id="int" name="int" value="5" /> <br />
+				<input type="submit" value="Show Int" />
+			</form>
+
+			<form data-lift="form.ajax">
+				<div data-lift="EchoForm">
+					<input type="text" name="name" placeholder="What's your name?">
+					<button id="submit" class="btn btn-primary btn-large">
+						<i class="icon-white icon-ok"></i> Submit
+					</button>
+				</div>
+			</form>
+
+			<div id="result">Your name will be echoed here</div>
+
+			<br /> <br /> <br />
+			<!-- Json form -->
+			<div data-lift="JsonForm">
+
+				<!-- Required for JSON forms processing -->
+				<script src="/classpath/jlift.js" data-lift="tail"></script>
+				<script id="jsonScript" data-lift="tail"></script>
+
+				<div id="jsonForm">
+
+					<label for="name"> Institution <input id="name" type="text"
+						name="name" value="Royal Society" />
+					</label> <label for="motto"> Motto <input id="motto" type="text"
+						name="motto" value="Nullius in verba" />
+					</label> <input type="submit" value="Send" />
+
+				</div>
+
+				<div id="result">Result will appear here.</div>
+			</div>
+			<!-- Json form End -->
+
+			<!--  -->
+			<form data-lift="ProgrammingLanguages?form=post">
+				<input id="autocomplete" /> <input type="submit" />
+			</form>
+
+			<ul>
+				<div>
+					<li data-lift="UserSnippet.showAll"><foo:user-name></foo:user-name>:
+						<foo:age></foo:age></li>
+				</div>
+			</ul>
+
+			<h2>Why my head hurts today</h2>
+			<div data-lift="UserSnippet.count">
+				<p>
+					Hello
+					<person:name></person:name>
+					here's a list of the alcoholic beverages you drank last night
+				</p>
+				<table>
+					<tr>
+						<th>Name of beverage</th>
+						<th>Count</th>
+					</tr>
+					<tbody lift:bind="person:consumption">
+						<tr>
+							<td><beverage:name></beverage:name></td>
+							<td><beverage:count></beverage:count></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		</p>
+	</div>
+</body>
+</html>
+

@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.autoReconnect"> true</property>
+		<property name="hibernate.connection.autoReconnectForPools">true</property>
+		<property name="hibernate.connection.is-connection-validation-required">true</property>
+
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/bulletinboard?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf8</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root</property>
+		<property name="hibernate.show_sql">true</property>
+
+		<property name="hibernate.connection.pool_size">0</property>
+		<property name="current_session_context_class">thread</property>
+		<!-- <property name="hibernate.generate_statistics">true</property> -->
+
+		<!-- <property name="hibernate.cache.provider_class">net.sf.ehcache.hibernate.EhCacheProvider</property> -->
+		<property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+		<!-- <property name="hibernate.cache.region.factory_class">net.sf.ehcache.hibernate.SingletonEhCacheRegionFactory</property> -->
+		<!-- <property name="hibernate.cache.use_query_cache">true</property> -->
+
+		<!-- <property name="hibernate.jdbc.batch_size">20</property> -->
+
+		<!-- c3p0 properties -->
+
+		<property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+		<property name="hibernate.c3p0.acquire_increment">1</property>
+		<property name="hibernate.c3p0.idle_test_period">300</property>
+		<property name="hibernate.c3p0.max_size">10</property>
+		<property name="hibernate.c3p0.min_size">2</property>
+		<property name="hibernate.c3p0.timeout">5000</property>
+		<property name="hibernate.c3p0.max_statement">0</property>
+		<property name="hibernate.c3p0.preferredTestQuery">select 1;</property>
+
+		<!-- <property name="hibernate.hbm2ddl.auto">create</property> -->
+		<property name="hibernate.hbm2ddl.auto">update</property>
+
+		<mapping class="db.mapping.City" />
+		<mapping class="db.mapping.Country" />
+		<mapping class="db.mapping.Province" />
+		<mapping class="db.mapping.District" />
+		<mapping class="db.mapping.Apartment" />
+		<mapping class="db.mapping.User" />
+		<mapping class="db.mapping.ApartmentImage" />
+	</session-factory>
+</hibernate-configuration> 

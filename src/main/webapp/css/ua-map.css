@@ -1,0 +1,251 @@
+#map-ukraine-wrapper {
+	position: relative;
+	width: 813px;
+	height: 548px;
+	margin: 0 auto;
+}
+
+#map-ukraine-overlay {
+	width: 813px;
+	height: 548px;
+	background: url(../images/ukraine-map.png) no-repeat top left;
+}
+
+#map-ukraine {
+	position: absoolute;
+	z-index: 5;
+}
+
+.region {
+	position: absolute;
+	overflow: hidden;
+	cursor: pointer;
+	display: none;
+}
+
+.item-1 {
+	background: url(../images/item-1.png) no-repeat;
+	/*Zakarpatskay - Uzhgorod*/
+	width: 112px;
+	height: 82px;
+	top: 234px;
+	left: 1px;
+}
+
+.item-2 {
+	background: url(../images/item-2.png) no-repeat; /*Lvovskaya - Lvov*/
+	width: 126px;
+	height: 136px;
+	top: 126px;
+	left: 23px;
+}
+
+.item-3 {
+	background: url(../images/item-3.png) no-repeat;
+	/*Ivano-Frankovskaya - Ivano-Frankovska*/
+	width: 96px;
+	height: 127px;
+	top: 202px;
+	left: 61px;
+}
+
+.item-4 {
+	background: url(../images/item-4.png) no-repeat; /*Volynskaya - Luck*/
+	width: 113px;
+	height: 121px;
+	top: 33px;
+	left: 66px;
+}
+
+.item-5 {
+	background: url(../images/item-5.png) no-repeat;
+	/*Chernovitskaya - Chernovtsy*/
+	width: 118px;
+	height: 66px;
+	top: 263px;
+	left: 123px;
+}
+
+.item-6 {
+	background: url(../images/item-6.png) no-repeat;
+	/*Ternopolskaya-Ternopol*/
+	width: 75px;
+	height: 122px;
+	top: 155px;
+	left: 114px;
+}
+
+.item-7 {
+	background: url(../images/item-7.png) no-repeat;
+	/*Chmelnitskaya - Chmelnitskiy*/
+	width: 80px;
+	height: 148px;
+	top: 134px;
+	left: 177px;
+}
+
+.item-8 {
+	background: url(../images/item-8.png) no-repeat; /*Rovenskaya - Rovno*/
+	width: 120px;
+	height: 140px;
+	top: 32px;
+	left: 132px;
+}
+
+.item-9 {
+	background: url(../images/item-9.png) no-repeat;
+	/*Jitomirskaya - Jitomir*/
+	width: 119px;
+	height: 150px;
+	top: 52px;
+	left: 221px;
+}
+
+.item-10 {
+	background: url(../images/item-10.png) no-repeat;
+	/*Jitomirskaya - Jitomir*/
+	width: 120px;
+	height: 127px;
+	top: 179px;
+	left: 233px;
+}
+
+.item-11 {
+	background: url(../images/item-11.png) no-repeat; /*Odessa - Odesskaya*/
+	width: 140px;
+	height: 202px;
+	top: 294px;
+	left: 272px;
+}
+
+.item-12 {
+	background: url(../images/item-12.png) no-repeat; /*Kievskaya - Kiev*/
+	width: 132px;
+	height: 167px;
+	top: 63px;
+	left: 318px;
+}
+
+.item-13 {
+	background: url(../images/item-13.png) no-repeat;
+	/*Chernigovskaya - Chernigov*/
+	width: 139px;
+	height: 147px;
+	top: 3px;
+	left: 372px;
+}
+
+.item-14 {
+	background: url(../images/item-14.png) no-repeat;
+	/*Cherkasskaya - Cherkassy*/
+	width: 149px;
+	height: 122px;
+	top: 156px;
+	left: 334px;
+}
+
+.item-15 {
+	background: url(../images/item-15.png) no-repeat;
+	/*Kirovograd - Kirovogradskaya*/
+	width: 188px;
+	height: 102px;
+	top: 225px;
+	left: 340px;
+}
+
+.item-16 {
+	background: url(../images/item-16.png) no-repeat;
+	/*Nikolaev - Nikolaevskaya*/
+	width: 133px;
+	height: 111px;
+	top: 294px;
+	left: 362px;
+}
+
+.item-17 {
+	background: url(../images/item-17.png) no-repeat;
+	/*Hersonskaya - Herson*/
+	width: 164px;
+	height: 121px;
+	top: 337px;
+	left: 420px;
+}
+
+.item-18 {
+	background: url(../images/item-18.png) no-repeat;
+	/*Dnepropetrovskaya - Dnepropetrovsk*/
+	width: 180px;
+	height: 118px;
+	top: 229px;
+	left: 486px;
+}
+
+.item-19 {
+	background: url(../images/item-19.png) no-repeat;
+	/*Zaporojskaya - Zaporojie*/
+	width: 139px;
+	height: 140px;
+	top: 299px;
+	left: 541px;
+}
+
+.item-20 {
+	background: url(../images/item-20.png) no-repeat;
+	/*Donetskaya - Donetsk*/
+	width: 115px;
+	height: 162px;
+	top: 226px;
+	left: 648px;
+}
+
+.item-21 {
+	background: url(../images/item-21.png) no-repeat;
+	/*Luganskaya - Lugansk*/
+	width: 108px;
+	height: 158px;
+	top: 164px;
+	left: 705px;
+}
+
+.item-22 {
+	background: url(../images/item-22.png) no-repeat;
+	/*Harkovskaya - Harkovskaya*/
+	width: 147px;
+	height: 135px;
+	top: 140px;
+	left: 571px;
+}
+
+.item-23 {
+	background: url(../images/item-23.png) no-repeat;
+	/*Poltavskaya - Poltava*/
+	width: 155px;
+	height: 127px;
+	top: 133px;
+	left: 446px;
+}
+
+.item-24 {
+	background: url(../images/item-24.png) no-repeat; /*Sumskaya - Sum*/
+	width: 127px;
+	height: 165px;
+	top: 0px;
+	left: 484px;
+}
+
+.item-25 {
+	background: url(../images/item-25.png) no-repeat; /*Krim - Simferopol*/
+	width: 192px;
+	height: 120px;
+	top: 427px;
+	left: 463px;
+}
+
+.more-cities-pop-up {
+	display: none;
+	padding: 10px;
+}
+
+.more-cities-pop-up .title {
+	margin-bottom: 5px;
+}

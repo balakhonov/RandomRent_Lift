@@ -1,0 +1,37 @@
+<body class="lift:content_id=page">
+	<div id="page" class="lift:surround?with=admin;at=content">
+		<title data-lift="head">Home Page</title>
+		<div style="vertical-align: top;">
+			<div data-lift="admin.province.AdminProvince.countries">
+				Страны:<select id="country-list">
+				</select> <br /> <br />
+			</div>
+
+			<div data-lift="admin.province.AdminProvince.isCountryFound">
+				<div data-lift="admin.province.AdminProvince.addProvinceButton">
+					<a foo:href="">Добавить провинцию</a><br /> <br />
+				</div>
+
+				<div style="display: inline-block; width: 250px; vertical-align: top;">
+					<h4>Провинции:</h4>
+					<ul>
+						<li data-lift="admin.province.AdminProvince.provinces"><a foo:href="" foo:class=""><foo:name></foo:name></a></li>
+					</ul>
+				</div>
+				<div style="display: inline-block; width: 400px; vertical-align: top;">
+					<div data-lift="admin.province.AdminProvince.isProvinceFound">
+						<div data-lift="admin.province.AdminProvince.updateForm?form=post">
+							<table>
+								<tr>
+									<td>Название провинции</td>
+									<td><input name="province-name" type="text" value="" /></td>
+								</tr>
+							</table>
+							<input class="button" type="submit" value="Обновить" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</body>
+
